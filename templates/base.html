@@ -7,6 +7,35 @@
 <body>
 <h1>Миссия Колонизация Марса</h1>
 <h4>И на Марсе будут яблони цвести!</h4>
-<div> </div>
+<div></div>
+{% if 'инженер' in prof_list %}
+<div>
+    <h3>
+        Инженерные тренажеры
+    </h3>
+    <img src="/static/img/prof1.jpg"/>
+</div>
+{% elif 'строитель' in prof_list %}
+<div>
+    <h3>
+        Научные симуляторы
+    </h3>
+    <img src="/static/img/prof2.png"/>
+</div>
+{% elif 'доктор' in prof_list %}
+<div>
+    <h2>
+        Дурка
+    </h2>
+    <img src="/static/img/durka.jpg"/>
+</div>
+{% else %}
+<div>
+    <h2>
+        Ты кто такой?
+    </h2>
+    <img src="/static/img/ti_kto.jpg"/>
+</div>
+{% endif %}
 </body>
 </html>
